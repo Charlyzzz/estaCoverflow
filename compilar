@@ -1,0 +1,44 @@
+#bin/bash
+reset
+echo		INICIANDO SCRIPT DE COMPILACION DE ARCHIVOS FUENTE
+echo
+echo
+echo
+echo Programa compilado
+cd /mnt/usb/proyectoPrograma
+gcc -o Programa programa.c -lconitos-estaCoverflow -lcommons
+cp Programa /conitosTeam/
+echo
+echo
+echo
+echo UMV compilada
+cd /mnt/usb/proyectoUMV
+gcc -o UMV umv.c -lconitos-estaCoverflow -lcommons -lpthread
+cp UMV /conitosTeam
+cp configUMV /conitosTeam
+cp correrUMV /conitosTeam
+echo
+echo
+echo
+echo Compilando Kernel
+cd /mnt/usb/proyectoKernel
+gcc -o Kernel *.c -lconitos-estaCoverflow -lcommons -lpthread -lparser-ansisop
+cp Kernel /conitosTeam
+cp configKernel /conitosTeam
+cp correrKernel /conitosTeam
+echo
+echo
+echo
+echo CPU compilada
+cd /mnt/usb/proyectoCPU
+gcc -o CPU *.c -lconitos-estaCoverflow -lcommons -lpthread -lparser-ansisop
+cp CPU /conitosTeam
+cp configCPU /conitosTeam
+cd /mnt/usb
+cp -r -u -f scripts /conitosTeam
+cp -f pconfig /conitosTeam
+echo
+echo
+echo
+echo ***************************FINALIZADO***************************
+

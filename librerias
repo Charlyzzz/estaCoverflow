@@ -1,0 +1,35 @@
+!#bin/bash
+echo INICIANDO SCRIPT AUTOMAGICA PARA HACER EL DEPLOY
+echo
+echo
+echo
+echo Creando directorio raiz para Conitos Team
+sudo mkdir  -m 777 -p /conitosTeam
+echo
+echo
+echo
+echo
+echo
+echo
+echo Instalando Conitos-Library
+cd /mnt/usb/conitos-estaCoverflow
+sudo make install
+echo
+echo
+echo
+echo Instalando Parser
+cd /mnt/usb/parser/parser
+sudo make install
+echo
+echo
+echo
+echo Instalando Commons
+cd /mnt/usb/commons
+sudo  make install
+echo
+echo
+echo
+echo
+echo *****************FINALIZADO*********************
+
+

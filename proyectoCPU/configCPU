@@ -1,0 +1,4 @@
+IPKernel=127.0.0.1
+IPUMV=127.0.0.1
+PuertoKernel=5001
+PuertoUMV=5000
